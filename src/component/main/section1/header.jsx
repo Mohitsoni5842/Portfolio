@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { ImMenu } from "react-icons/im";
 import { IoClose } from "react-icons/io5";
-import logo from "../../../assets/logo.png";
+
 const Header = () => {
   const [open, setOpen] = useState(false);
   const navLinks = [
@@ -38,7 +38,7 @@ const Header = () => {
         <div className="navigate w-full h-30 flex items-center justify-between px-6">
           {/* Logo */}
           <div className="logo w-60 h-30">
-            <img src={logo} alt="logo" className="w-60 h-30" />
+            <img src="/logo" alt="logo" className="w-60 h-30" />
           </div>
 
           <div className="nav hidden lg:flex w-290 h-30 items-center">
@@ -86,4 +86,5 @@ const Header = () => {
 };
 
 export default Header;
+
 
