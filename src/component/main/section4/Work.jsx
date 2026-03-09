@@ -1,5 +1,8 @@
 import React, { useState, useEffect } from "react";
-
+import spotify from "../../../assets/spotify.png";
+import weather from "../../../assets/weather.jpg";
+import invoice from "../../../assets/invoice.jpeg";
+import periodic from "../../../assets/periodic-table.jpg";
 const Footer = () => {
   const images = [
     "spotify.png",
@@ -7,31 +10,27 @@ const Footer = () => {
     "invoice.jpeg",
     "periodic-table.jpg",
   ];
+
   const projects = [
     {
       id: 1,
       title: "Periodic Table",
-      image: "periodic-table.jpg",
+      image: periodic,
       liveLink: "https://periodic-table-pearl-kappa.vercel.app/",
     },
     {
       id: 2,
       title: "Weather Forecast",
-      image: "weather.jpg",
+      image: weather,
       liveLink: "https://weather-forecast-phi-two.vercel.app/",
     },
     {
       id: 3,
       title: "Music Player",
-      image: "spotify.png",
+      image: spotify,
       liveLink: "https://music-player-omega-ashen.vercel.app/",
     },
-    {
-      id: 4,
-      title: "Invoice Generator",
-      image: "invoice.jpeg",
-      liveLink: "#",
-    },
+    { id: 4, title: "Invoice Generator", image: invoice, liveLink: "#" },
   ];
   const [current, setCurrent] = useState(0);
 
@@ -84,9 +83,7 @@ const Footer = () => {
                 className="w-full h-10/12 shrink-0 
                    bg-cover bg-center bg-no-repeat
                    flex items-end justify-center group"
-                style={{
-                  backgroundImage: `url(/src/component/main/section4/${img.image})`,
-                }}
+                style={{ backgroundImage: `url(${img.image})` }}
               >
                 <button
                   className="mb-6 px-6 py-2 bg-black/70 text-white rounded-lg
