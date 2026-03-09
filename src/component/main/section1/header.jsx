@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { ImMenu } from "react-icons/im";
 import { IoClose } from "react-icons/io5";
-
+import logo from "../../../assets/logo.png";
 const Header = () => {
   const [open, setOpen] = useState(false);
   const navLinks = [
@@ -23,7 +23,7 @@ const Header = () => {
     {
       id: 4,
       name: "Resume",
-      link: "#",
+      link: "file:///C:/Users/Soni106/Downloads/blue%20Minimalist%20modern%20CV%20resume.pdf",
     },
     {
       id: 5,
@@ -37,9 +37,10 @@ const Header = () => {
       <div className="header w-full h-30 flex justify-center">
         <div className="navigate w-full h-30 flex items-center justify-between px-6">
           {/* Logo */}
-          <div className="logo w-60 h-30">
-            <img src="/logo" alt="logo" className="w-60 h-30" />
-          </div>
+          <div
+            className="logo w-60 h-30 md:w-60 md:h-30 lg:w-80 lg:h-40  bg-contain bg-no-repeat bg-center"
+            style={{ backgroundImage: `url(${logo})` }}
+          ></div>
 
           <div className="nav hidden lg:flex w-290 h-30 items-center">
             {navLinks.map((item) => (
@@ -86,5 +87,3 @@ const Header = () => {
 };
 
 export default Header;
-
-
