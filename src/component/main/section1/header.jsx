@@ -23,7 +23,7 @@ const Header = () => {
     {
       id: 4,
       name: "Resume",
-      link: "file:///C:/Users/Soni106/Downloads/blue%20Minimalist%20modern%20CV%20resume.pdf",
+      link: "#",
     },
     {
       id: 5,
@@ -86,3 +86,4 @@ const Header = () => {
 };
 
 export default Header;
+
